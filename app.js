@@ -28,6 +28,20 @@ app.get("/contact",function(req,res){
   res.render("contact",{contactContent:contactContent})
 })
 
+app.get("/compose",function(req,res){
+   res.render("compose")
+})
+
+app.post("/compose",function(req,res){
+  let forminput=req.body.input;
+  let textinput=req.body.postbody
+   
+  var storingconetnt={
+    title:forminput,
+    textinput:textinput
+  }
+  console.log(storingconetnt);
+})
 
 
 
