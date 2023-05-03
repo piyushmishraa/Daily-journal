@@ -18,8 +18,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
-  res.render("home",{homeStartingContent:homeStartingContent });
-  console.log(posts);
+  res.render("home",{
+    homeStartingContent:homeStartingContent,
+    posts:posts
+   });
+  
 });
 
 
@@ -32,7 +35,7 @@ app.get("/contact",function(req,res){
 })
 
 app.get("/compose",function(req,res){
-   res.render("compose")
+   res.render("compose");
 })
 
 app.post("/compose",function(req,res){
