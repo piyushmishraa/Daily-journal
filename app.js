@@ -10,6 +10,7 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
  
 let posts=[];
 
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -49,17 +50,25 @@ app.post("/compose",function(req,res){
   posts.push(storingconetnt);
   res.redirect("/");
 
+
+
 })
 
 
 
 app.get("/posts/:postsName",function(req,res){
-  console.log(req.params.postsName);
+  let a = req.params.postsName;
+  
+  posts.forEach(function(post){
+    const storedtitle=post.title;
+    if(a===storedtitle){
+      console.log("match found!");
+    }
+
+  })
+
+  
 })
-
-
-
-
 
 
 
