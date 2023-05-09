@@ -1,4 +1,4 @@
-# Daily Journal
+# Daily Journal(Although,it needs to be optimized as it lacks databases yet)
 
 ![home](https://user-images.githubusercontent.com/116213566/236603481-b66a0c8f-ff7c-4e5f-a4db-eb5bc6c145c1.png)
 
